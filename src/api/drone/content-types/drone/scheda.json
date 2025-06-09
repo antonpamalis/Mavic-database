@@ -1,6 +1,5 @@
 {
   "kind": "collectionType",
-  "collectionName": "drones",
   "info": {
     "singularName": "drone",
     "pluralName": "drones",
@@ -10,11 +9,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "название": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "серийный_номер": {
+    "serialNumber": {
       "type": "string",
       "unique": true
     }
