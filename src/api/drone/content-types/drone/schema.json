@@ -1,21 +1,35 @@
 {
   "kind": "collectionType",
+  "collectionName": "drones",
   "info": {
     "singularName": "drone",
     "pluralName": "drones",
-    "displayName": "Drone"
+    "displayName": "Drone",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+    "position": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::position.position"
     },
-    "serialNumber": {
-      "type": "string",
-      "unique": true
+    "SerialNumber": {
+      "type": "string"
+    },
+    "drone_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::drone-type.drone-type"
+    },
+    "drone_position_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::drone-position-history.drone-position-history",
+      "mappedBy": "drone"
     }
   }
 }

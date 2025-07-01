@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drone_position_histories",
+  "info": {
+    "singularName": "drone-position-history",
+    "pluralName": "drone-position-histories",
+    "displayName": "DronePositionHistory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "drone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::drone.drone",
+      "inversedBy": "drone_position_histories"
+    },
+    "position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::position.position",
+      "inversedBy": "drone_position_histories"
+    },
+    "Comment": {
+      "type": "text"
+    },
+    "Date": {
+      "type": "datetime"
+    }
+  }
+}

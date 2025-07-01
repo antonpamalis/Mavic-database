@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drone_types",
+  "info": {
+    "singularName": "drone-type",
+    "pluralName": "drone-types",
+    "displayName": "DroneType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NameOfType": {
+      "type": "string"
+    }
+  }
+}
